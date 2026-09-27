@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf5;
+    color: #30251f;
+}
+
+.recipes-header {
+    background: #30231e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    width: min(1100px, 92%);
+    min-height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-inner > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-inner > div > span {
+    font-size: 30px;
+}
+
+.header-inner strong {
+    display: block;
+}
+
+.header-inner small {
+    color: #c9b9b0;
+}
+
+.logout {
+    border: 1px solid #745b4d;
+    background: transparent;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.welcome {
+    text-align: center;
+    padding: 70px 20px 45px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff4e9,
+            #fffaf5
+        );
+}
+
+.exclusive {
+    display: inline-block;
+    color: #2e7d32;
+    background: #e4f4e4;
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.welcome h1 {
+    font-size: 45px;
+    margin: 18px 0 8px;
+}
+
+.welcome p {
+    color: #7a695f;
+}
+
+.recipes-container {
+    width: min(1100px, 92%);
+    margin: 40px auto 70px;
+}
+
+.recipes-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.recipe {
+    background: white;
+    border: 1px solid #eee1d8;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 7px 25px rgba(50, 25, 10, .04);
+}
+
+.recipe-number {
+    color: #e56b3f;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.recipe h2 {
+    margin: 7px 0;
+}
+
+.recipe-time {
+    color: #8b786b;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.recipe h3 {
+    font-size: 15px;
+    margin: 18px 0 8px;
+}
+
+.recipe ul {
+    padding-left: 20px;
+    color: #65574f;
+}
+
+.recipe li {
+    margin-bottom: 5px;
+}
+
+.preparo {
+    color: #65574f;
+    line-height: 1.7;
+}
+
+.bonus {
+    padding: 70px 20px;
+    background: #30231e;
+    color: white;
+}
+
+.bonus-box {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.bonus-box > span {
+    color: #ffd2b9;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.bonus-box h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.bonus-box > p {
+    color: #d4c6be;
+    max-width: 700px;
+    margin: auto;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.tips div {
+    background: #3c2d26;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.tips strong {
+    font-size: 28px;
+}
+
+.tips p {
+    color: #d4c6be;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.bonus-box > small {
+    display: block;
+    color: #aa9990;
+    line-height: 1.6;
+}
+
+footer {
+    background: #1e1613;
+    color: #9f9189;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+
+    .recipes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .tips {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .tips {
+        grid-template-columns: 1fr;
+    }
+
+    .header-inner strong {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   BOTÕES DE IMPRESSÃO E PDF
+   ========================================================= */
+
+   .acoes-pdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 25px auto;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.btn-pdf {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    background: #e56b3f;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-pdf:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-pdf:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   VERSÃO PARA IMPRESSÃO / PDF
+   ========================================================= */
+
+@media print {
+
+    /* Esconde os botões no documento impresso */
+    .acoes-pdf {
+        display: none !important;
+    }
+
+    /* Esconde elementos que não precisam aparecer no PDF */
+    .recipes-header,
+    footer,
+    .logout {
+        display: none !important;
+    }
+
+    /* Remove elementos desnecessários */
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .welcome {
+        margin-top: 0;
+    }
+
+    /* Evita cortar uma receita entre páginas */
+    .receita,
+    .recipe-card,
+    .recipe {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Evita cortar o bônus */
+    .bonus,
+    .bonus-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Remove sombras na impressão */
+    * {
+        box-shadow: none !important;
+    }
+
+}

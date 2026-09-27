@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="robots"
+        content="noindex, nofollow">
+
+    <title>Minhas Receitas</title>
+
+    <link rel="stylesheet" href="receitas.css">
+</head>
+
+<body>
+
+    <header class="recipes-header">
+
+        <div class="header-inner">
+
+            <div>
+                <span>🍽️</span>
+
+                <div>
+                    <strong>
+                        40 Receitas Fáceis
+                    </strong>
+
+                    <small>
+                        Seu conteúdo exclusivo
+                    </small>
+                </div>
+            </div>
+
+            <button
+                onclick="sair()"
+                class="logout">
+                🔒 Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="welcome">
+
+            <span class="exclusive">
+                🔓 ACESSO LIBERADO
+            </span>
+
+            <h1>
+                Suas 40 Receitas
+            </h1>
+
+            <p>
+                Aproveite seu conteúdo exclusivo.
+            </p>
+
+        </section>
+
+
+        <!-- BOTÕES DE PDF E IMPRESSÃO -->
+
+        <section class="acoes-pdf">
+
+            <button
+                type="button"
+                onclick="window.print()"
+                class="btn-pdf">
+
+                🖨️ Imprimir receitas
+
+            </button>
+
+            <button
+                type="button"
+                onclick="window.print()"
+                class="btn-pdf">
+
+                📥 Baixar / Salvar em PDF
+
+            </button>
+
+        </section>
+
+
+        <section class="recipes-container">
+
+            <div
+                id="recipesList"
+                class="recipes-list">
+            </div>
+
+        </section>
+
+
+        <!-- BÔNUS -->
+
+        <section class="bonus">
+
+            <div class="bonus-box">
+
+                <span>🎁 BÔNUS</span>
+
+                <h2>
+                    Emagreça com Saúde
+                </h2>
+
+                <p>
+                    Pequenas mudanças na rotina podem
+                    contribuir para hábitos alimentares
+                    mais equilibrados.
+                </p>
+
+                <div class="tips">
+
+                    <div>
+
+                        <strong>💧</strong>
+
+                        <p>
+                            Mantenha uma boa hidratação
+                            ao longo do dia.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>🥗</strong>
+
+                        <p>
+                            Priorize variedade de alimentos
+                            nas refeições.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>🚶</strong>
+
+                        <p>
+                            Procure manter uma rotina
+                            de atividades físicas.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>😴</strong>
+
+                        <p>
+                            Dê atenção também ao descanso
+                            e ao sono.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <small>
+                    Este conteúdo é apenas informativo
+                    e não substitui orientação de médico,
+                    nutricionista ou outro profissional
+                    qualificado.
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Receitas Fáceis
+
+    </footer>
+
+
+    <script src="receitas.js"></script>
+
+</body>
+
+</html>
